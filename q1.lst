@@ -57,5 +57,5 @@ SELECT courseid FROM REGISTRATION WHERE fee>=1200 AND TO_CHAR(regdate,'MM')='08'
 
 SELECT courseid FROM REGISTRATION WHERE fee <2500; /* Requirement 5 */
 SELECT studentid,AVG(fee) FROM REGISTRATION GROUP BY studentid HAVING COUNT(studentid) > 1 AND AVG(fee)<1800; /* Requirement 6 */
-UPDATE COURSE SET noofdays =noofdays+1 WHERE courseid=902 OR courseid=904;/* Requirement 7 */
+UPDATE COURSE SET noofdays =noofdays+1 WHERE courseid=902 OR courseid=904; /* Requirement 7 */
 DELETE FROM STUDENT S WHERE studentid NOT IN(SELECT studentid FROM REGISTRATION  ); /* Requirement 8 */
